@@ -1,0 +1,65 @@
+{
+	"geode": "5.0.0-beta.2",
+	"gd": {
+		"win": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "bunchuq1122.confirm-edits",
+	"name": "Confirm Edits",
+	"version": "v1.0.0",
+	"developer": "Bunchuq1122",
+	"description": "",
+	"tags": [
+		"editor", "offline", "enhancement", "interface"
+	],
+	"dependencies": {
+		"geode.node-ids": ">=v1.20.0"
+	},
+	"settings": {
+		"Confirm_PasteState": {
+			"type": "bool",
+			"name": "Confirm PasteState",
+			"description": "Confirm when you are gonna paste the Object's State",
+			"default": true
+		},
+		"edit group menu": {
+			"type": "title",
+			"name": "edit group"
+		},
+		"Confirm_PasteState2": {
+			"type" : "bool",
+			"name": "Confirm Paste(on EditGroup ui)",
+			"description": "Confirm when you are gonna paste the Object's Stete on EditGroup UI",
+			"default": true
+		},
+		"Confirm_AddGroup": {
+			"type": "bool",
+			"name": "Confirm AddGroup",
+			"description": "Confirm when you are gonna add new GroupID",
+			"default": true
+		},
+		"pauselayer menu": {
+			"type": "title",
+			"name": "PauseMenu"
+		},
+		"Confirm_AlignX": {
+			"type": "bool",
+			"name": "Confirm AlignX",
+			"description": "Confirm AlignX button",
+			"default": true
+		},
+		"Confirm_AlignY": {
+			"type": "bool",
+			"name": "Confirm AlignY",
+			"description": "Confirm AlignY",
+			"default": true
+		},
+		"Confirm_BuildHelper": {
+			"type": "bool",
+			"name": "Confirm BuildHelper",
+			"description": "Confirm BUildHelper",
+			"default": true
+		}
+	}
+}
