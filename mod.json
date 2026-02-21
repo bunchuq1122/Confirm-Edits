@@ -64,7 +64,7 @@
 		"Confirm_BuildHelper": {
 			"type": "bool",
 			"name": "Confirm BuildHelper",
-			"description": "Confirm BUildHelper",
+			"description": "Confirm BuildHelper",
 			"default": true
 		}
 	}

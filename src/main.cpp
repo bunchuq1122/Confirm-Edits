@@ -38,7 +38,7 @@ namespace {
             label->setScale(0.45f);
             label->setOpacity(255);
             label->setPosition({ win.width / 2.f, win.height * 0.78f });
-            host->addChild(label, 999999);
+            host->addChild(label, 3);
         }
 
         auto node = host->getChildByTag(tag);
