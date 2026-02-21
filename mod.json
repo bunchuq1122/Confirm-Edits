@@ -2,14 +2,20 @@
 	"geode": "5.0.0-beta.2",
 	"gd": {
 		"win": "2.2081",
-		"mac": "2.2081",
-		"ios": "2.2081"
+		"mac": "2.2081"
 	},
 	"id": "bunchuq1122.confirm-edits",
 	"name": "Confirm Edits",
 	"version": "v1.0.0",
 	"developer": "Bunchuq1122",
 	"description": "",
+	"links": {
+		"source": "https://github.com/bunchuq1122/Confirm-Edits"
+	},
+	"issues": {
+		"info": "report issues on github repository",
+		"url": "https://github.com/bunchuq1122/Confirm-Edits/issues"
+	},
 	"tags": [
 		"editor", "offline", "enhancement", "interface"
 	],

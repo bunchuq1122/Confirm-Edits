@@ -8,7 +8,7 @@
 using namespace geode::prelude;
 
 namespace {
-    using Clock = std::chrono::steady_clock;
+    using Clock = std::chrono::steady_clock; // timer
 
     constexpr int kHintPasteState   = 69001; // numbers for timers
     constexpr int kHintPasteState2  = 69002;
