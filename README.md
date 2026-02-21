@@ -5,4 +5,6 @@
 3. BuildHelper
 4. and etc.
 
+Currently tested on Windows and Mac only.
+
 <img src="logo.png">
