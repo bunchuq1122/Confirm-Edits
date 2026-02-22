@@ -8,6 +8,18 @@
 
 using namespace geode::prelude;
 
+static int getSelectedCount() { // get number of selected objects
+    auto lel = LevelEditorLayer::get();
+    if (!lel) return -1; // pass
+
+    auto ui = lel->m_editorUI;
+    if (!ui) return -1; // pass
+
+    if (!ui->m_selectedObjects) return -1; // pass
+
+    return ui->m_selectedObjects->count();
+}
+
 namespace {
     using Clock = std::chrono::steady_clock;
 
@@ -51,13 +63,26 @@ namespace {
     }
 
     bool shouldRunWithConfirm(
-        CCNode* host,
-        Clock::time_point& lastPress,
-        CCLabelBMFont*& hintLabel,
-        char const* settingKey,
+        CCNode* host, // class name of edit-button
+        Clock::time_point& lastPress, // timer
+        CCLabelBMFont*& hintLabel, // hint
+        char const* settingKey, // literally key of setting
         std::string const& buttonName
     ) {
         if (!Mod::get()->getSettingValue<bool>(settingKey)) return true;
+
+        // checking if "Confirm_EditSeveralObjs" is enabled
+        if (Mod::get()->getSettingValue<bool>("Confirm_EditSeveralObjs")) {
+            int count = 0;
+
+            auto lel = LevelEditorLayer::get();
+            if (lel && lel->m_editorUI && lel->m_editorUI->m_selectedObjects) {
+                count = lel->m_editorUI->m_selectedObjects->count();
+            }
+
+            if (count <= 1)
+                return true;
+        }
 
         auto now = Clock::now();
 

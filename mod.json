@@ -6,9 +6,9 @@
 	},
 	"id": "bunchuq1122.confirm-edits",
 	"name": "Confirm Edits",
-	"version": "v1.0.2",
+	"version": "v1.0.3",
 	"developer": "Bunchuq1122",
-	"description": "",
+	"description": "Confirm before edit",
 	"links": {
 		"source": "https://github.com/bunchuq1122/Confirm-Edits"
 	},
@@ -23,6 +23,16 @@
 		"geode.node-ids": ">=v1.20.0"
 	},
 	"settings": {
+		"Confirm_EditSeveralObjs": {
+			"type": "bool",
+			"name": "Confirm Edit Several Objs only",
+			"description": "Literally Confirm only if multiple objs are selected",
+			"default": false
+		},
+		"Editor UI": {
+			"type": "title",
+			"name": "Editor UI"
+		},
 		"Confirm_PasteState": {
 			"type": "bool",
 			"name": "Confirm PasteState",

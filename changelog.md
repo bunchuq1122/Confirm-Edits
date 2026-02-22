@@ -7,3 +7,6 @@
 
 # 1.0.2
 - updated the geode version
+
+# 1.0.3
+- new option **"Confirm Edit Several Objs only"**
