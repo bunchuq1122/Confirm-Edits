@@ -4,3 +4,6 @@
 # 1.0.1
 - added more options
 - Confirm PasteColor, Confirm RemoveFromGroup
+
+# 1.0.2
+- updated the geode version
