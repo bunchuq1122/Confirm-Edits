@@ -29,6 +29,12 @@
 			"description": "Confirm when you are gonna paste the Object's State",
 			"default": true
 		},
+		"Confirm_PasteColor": {
+			"type": "bool",
+			"name": "Confirm PasteColor",
+			"description": "COnfirm when you are gonna paste the Object's Color",
+			"default": true
+		},
 		"edit group menu": {
 			"type": "title",
 			"name": "edit group"
@@ -43,6 +49,12 @@
 			"type": "bool",
 			"name": "Confirm AddGroup",
 			"description": "Confirm when you are gonna add new GroupID",
+			"default": true
+		},
+		"Confirm_RemoveFromGroup": {
+			"type": "bool",
+			"name": "Confirm RemoveFromGroup",
+			"description": "Confirm when you are gonna remove a GroupID",
 			"default": true
 		},
 		"pauselayer menu": {
