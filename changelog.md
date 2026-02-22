@@ -3,4 +3,4 @@
 
 # 1.0.1
 - added more options
-- Confirm PasteColor, Confirm RemoveGromGroup
+- Confirm PasteColor, Confirm RemoveFromGroup
