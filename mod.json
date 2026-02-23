@@ -1,12 +1,12 @@
 {
-	"geode": "5.0.0-beta.4",
+	"geode": "5.0.0",
 	"gd": {
 		"win": "2.2081",
 		"mac": "2.2081"
 	},
 	"id": "bunchuq1122.confirm-edits",
 	"name": "Confirm Edits",
-	"version": "v1.0.3",
+	"version": "v1.0.4",
 	"developer": "Bunchuq1122",
 	"description": "Confirm before edit",
 	"links": {

@@ -10,3 +10,6 @@
 
 # 1.0.3
 - new option **"Confirm Edit Several Objs only"**
+
+# 1.0.4
+- welcome Geode 5.0.0!
