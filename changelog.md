@@ -13,3 +13,6 @@
 
 # 1.0.4
 - welcome Geode 5.0.0!
+
+# 1.0.5
+- Welcom android!
