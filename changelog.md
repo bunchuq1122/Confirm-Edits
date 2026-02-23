@@ -15,4 +15,8 @@
 - welcome Geode 5.0.0!
 
 # 1.0.5
-- Welcom android!
+- Welcome android!
+
+# 1.0.6
+- hotfix 1.0.5
+- Welcome IOS, MAC, ANDROID!

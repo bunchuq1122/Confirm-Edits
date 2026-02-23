@@ -8,18 +8,6 @@
 
 using namespace geode::prelude;
 
-static int getSelectedCount() { // get number of selected objects
-    auto lel = LevelEditorLayer::get();
-    if (!lel) return -1; // pass
-
-    auto ui = lel->m_editorUI;
-    if (!ui) return -1; // pass
-
-    if (!ui->m_selectedObjects) return -1; // pass
-
-    return ui->m_selectedObjects->count();
-}
-
 namespace {
     using Clock = std::chrono::steady_clock;
 
