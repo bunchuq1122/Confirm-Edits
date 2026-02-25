@@ -39,6 +39,8 @@ namespace {
         label->setPosition({ win.width / 2.f, win.height * 0.78f });
         label->setOpacity(255);
         label->setVisible(true);
+        auto labeLId = Mod::get()->getID();
+        label->setID(labeLId+"/Hint");
 
         label->runAction(CCSequence::create(
             CCDelayTime::create(2.4f),

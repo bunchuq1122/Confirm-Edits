@@ -1,18 +1,17 @@
 {
-	"geode": "5.0.0",
+	"geode": "5.0.1",
 	"gd": {
 		"win": "2.2081",
-		"android": "2.2081",
-		"mac": "2.2081",
-		"ios": "2.2081"
+		"android": "2.2081"
 	},
 	"id": "bunchuq1122.confirm-edits",
 	"name": "Confirm Edits",
-	"version": "v1.0.6",
+	"version": "v1.0.6-alpha",
 	"developer": "Bunchuq1122",
 	"description": "Confirm before edit",
 	"links": {
-		"source": "https://github.com/bunchuq1122/Confirm-Edits"
+		"source": "https://github.com/bunchuq1122/Confirm-Edits",
+		"community": "https://github.com/bunchuq1122/Confirm-Edits"
 	},
 	"issues": {
 		"info": "report issues on github repository",
