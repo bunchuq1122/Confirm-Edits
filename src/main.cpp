@@ -58,7 +58,7 @@ namespace {
         Notification::create(
             "Press again within 3s to confirm " + buttonName,
             NotificationIcon::Info,
-            2.f
+            3.f
         )->show();
 
         return false;
