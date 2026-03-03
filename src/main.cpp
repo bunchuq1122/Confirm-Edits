@@ -2,6 +2,7 @@
 #include <Geode/modify/EditorUI.hpp>
 #include <Geode/modify/SetGroupIDLayer.hpp>
 #include <Geode/modify/EditorPauseLayer.hpp>
+#include <Geode/ui/Notification.hpp>
 
 #include <chrono>
 #include <string>
@@ -18,38 +19,6 @@ namespace {
         label->stopAllActions();
         label->setOpacity(0);
         label->setVisible(false);
-    }
-
-    CCLabelBMFont* ensureHint(CCNode* host, CCLabelBMFont* label, std::string const& buttonName) {
-        if (!host) return nullptr;
-
-        auto win = CCDirector::sharedDirector()->getWinSize();
-        std::string text = "Press again within 3s to confirm " + buttonName; // optimized
-
-        if (!label || label->getParent() != host) {
-            label = CCLabelBMFont::create(text.c_str(), "bigFont.fnt");
-            if (!label) return nullptr;
-            host->addChild(label, 3);
-        } else {
-            label->setString(text.c_str());
-        }
-
-        label->stopAllActions();
-        label->setScale(0.45f);
-        label->setPosition({ win.width / 2.f, win.height * 0.78f });
-        label->setOpacity(255);
-        label->setVisible(true);
-        auto labeLId = Mod::get()->getID();
-        label->setID(labeLId+"/Hint");
-
-        label->runAction(CCSequence::create(
-            CCDelayTime::create(2.4f),
-            CCFadeOut::create(0.35f),
-            CCHide::create(),
-            nullptr
-        ));
-
-        return label;
     }
 
     bool shouldRunWithConfirm(
@@ -76,17 +45,22 @@ namespace {
 
         auto now = Clock::now();
 
-        if (lastPress.time_since_epoch().count() != 0) {
+        if (lastPress != Clock::time_point{}) {
             auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(now - lastPress).count();
             if (ms <= kConfirmWindowMs) {
                 lastPress = {};
-                hideHint(hintLabel);
                 return true;
             }
         }
 
         lastPress = now;
-        hintLabel = ensureHint(host, hintLabel, buttonName);
+
+        Notification::create(
+            "Press again within 3s to confirm " + buttonName,
+            NotificationIcon::Info,
+            2.f
+        )->show();
+
         return false;
     }
 }

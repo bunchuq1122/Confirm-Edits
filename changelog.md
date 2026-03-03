@@ -20,3 +20,7 @@
 # 1.0.6
 - hotfix 1.0.5
 - Welcome IOS, MAC, ANDROID!
+
+# 1.0.7
+- use <cr>geode</c>::<cy>Notification</c> instead of dumb label
+- i didnt know that
