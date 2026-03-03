@@ -40,6 +40,7 @@ namespace {
             if (count <= 1)
                 return true;
         }
+        
 
         auto now = Clock::now();
 
@@ -56,7 +57,7 @@ namespace {
         Notification::create(
             "Press again within 3s to confirm " + buttonName,
             NotificationIcon::Info,
-            1.f
+            0.7f
         )->show();
 
         return false;
