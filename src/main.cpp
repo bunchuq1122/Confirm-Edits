@@ -22,9 +22,7 @@ namespace {
     }
 
     bool shouldRunWithConfirm(
-        CCNode* host, // class name of edit-button
         Clock::time_point& lastPress, // timer
-        CCLabelBMFont*& hintLabel, // hint
         char const* settingKey, // literally key of setting
         std::string const& buttonName
     ) {
@@ -69,15 +67,11 @@ class $modify(EditorUI) {
     struct Fields {
         Clock::time_point pasteStatePress;
         Clock::time_point pasteColorPress;
-        CCLabelBMFont* pasteStateHint = nullptr;
-        CCLabelBMFont* pasteColorHint = nullptr;
     };
 
     void onPasteState(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->pasteStatePress,
-            m_fields->pasteStateHint,
             "Confirm_PasteState",
             "Paste State"
         )) return;
@@ -87,9 +81,7 @@ class $modify(EditorUI) {
 
     void onPasteColor(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->pasteColorPress,
-            m_fields->pasteColorHint,
             "Confirm_PasteColor",
             "Paste Color"
         )) return;
@@ -103,16 +95,11 @@ class $modify(SetGroupIDLayer) {
         Clock::time_point pastePress;
         Clock::time_point addGroupPress;
         Clock::time_point removeFromGroup;
-        CCLabelBMFont* pasteHint = nullptr;
-        CCLabelBMFont* addGroupHint = nullptr;
-        CCLabelBMFont* removeFromGroupHint = nullptr;
     };
 
     void onPaste(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->pastePress,
-            m_fields->pasteHint,
             "Confirm_PasteState2",
             "Paste"
         )) return;
@@ -122,9 +109,7 @@ class $modify(SetGroupIDLayer) {
 
     void onAddGroup(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->addGroupPress,
-            m_fields->addGroupHint,
             "Confirm_AddGroup",
             "Add Group"
         )) return;
@@ -134,9 +119,7 @@ class $modify(SetGroupIDLayer) {
 
     void onRemoveFromGroup(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->removeFromGroup,
-            m_fields->removeFromGroupHint,
             "Confirm_RemoveFromGroup",
             "Remove Group"
         )) return;
@@ -150,16 +133,11 @@ class $modify(EditorPauseLayer) {
         Clock::time_point alignXPress;
         Clock::time_point alignYPress;
         Clock::time_point buildHelperPress;
-        CCLabelBMFont* alignXHint = nullptr;
-        CCLabelBMFont* alignYHint = nullptr;
-        CCLabelBMFont* buildHelperHint = nullptr;
     };
 
     void onAlignX(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->alignXPress,
-            m_fields->alignXHint,
             "Confirm_AlignX",
             "Align X"
         )) return;
@@ -169,9 +147,7 @@ class $modify(EditorPauseLayer) {
 
     void onAlignY(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->alignYPress,
-            m_fields->alignYHint,
             "Confirm_AlignY",
             "Align Y"
         )) return;
@@ -181,9 +157,7 @@ class $modify(EditorPauseLayer) {
 
     void onBuildHelper(CCObject* sender) {
         if (!shouldRunWithConfirm(
-            this,
             m_fields->buildHelperPress,
-            m_fields->buildHelperHint,
             "Confirm_BuildHelper",
             "Build Helper"
         )) return;
