@@ -14,13 +14,6 @@ namespace {
 
     constexpr int kConfirmWindowMs = 3000;
 
-    void hideHint(CCLabelBMFont* label) {
-        if (!label) return;
-        label->stopAllActions();
-        label->setOpacity(0);
-        label->setVisible(false);
-    }
-
     bool shouldRunWithConfirm(
         Clock::time_point& lastPress, // timer
         char const* settingKey, // literally key of setting
@@ -57,7 +50,7 @@ namespace {
         Notification::create(
             "Press again within 3s to confirm " + buttonName,
             NotificationIcon::Info,
-            0.7f
+            0.4f
         )->show();
 
         return false;
